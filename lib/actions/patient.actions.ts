@@ -1,13 +1,13 @@
 "use server";
 import {
   BUCKET_ID,
-  DATABASE_ID,
+  APP_WRITE_DATABASE_ID,
   databases,
   ENDPOINT,
   PATIENT_COLLECTION_ID,
-  PROJECT_ID,
   storage,
   users,
+  APP_WRITE_PROJECT_ID,
 } from "@/lib/appwrite.config";
 import { ID, Query } from "node-appwrite";
 import { parseStringify } from "@/lib/utils";
@@ -70,12 +70,12 @@ export const registerPatient = async ({
 
     // Create new patient -> https://appwrite.io/docs/references/1.5.x/server-nodejs/database#createDocument
     const newPatient = await databases.createDocument(
-      DATABASE_ID!,
+      APP_WRITE_DATABASE_ID!,
       PATIENT_COLLECTION_ID!,
       ID.unique(),
       {
         identificationDocumentId: file?.$id || null,
-        identificationDocumentUrl: `${ENDPOINT}/storage/buckets/${BUCKET_ID}/files/${file?.$id}/view?project=${PROJECT_ID}`,
+        identificationDocumentUrl: `${ENDPOINT}/storage/buckets/${BUCKET_ID}/files/${file?.$id}/view?project=${APP_WRITE_PROJECT_ID}`,
         ...patient,
       },
     );

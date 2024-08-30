@@ -1,9 +1,9 @@
 import * as sdk from "node-appwrite";
 
 export const {
-  PROJECT_ID,
-  API_KEY,
-  DATABASE_ID,
+  APP_WRITE_PROJECT_ID,
+  APP_WRITE_API_KEY,
+  APP_WRITE_DATABASE_ID,
   PATIENT_COLLECTION_ID,
   DOCTOR_COLLECTION_ID,
   APPOINTMENT_COLLECTION_ID,
@@ -13,10 +13,10 @@ export const {
 
 const client = new sdk.Client()
   .setEndpoint(ENDPOINT!) // Your API Endpoint
-  .setProject(PROJECT_ID!) // Your project ID
-  .setKey(API_KEY!); // Your secret API key
+  .setProject(APP_WRITE_PROJECT_ID!) // Your project ID
+  .setKey(APP_WRITE_API_KEY!); // Your secret API key
 
-// client.setEndpoint(ENDPOINT!).setProject(PROJECT_ID!).setKey(API_KEY!);
+// client.setEndpoint(ENDPOINT!).setProject(APP_WRITE_PROJECT_ID!).setKey(APP_WRITE_API_KEY!);
 
 export const databases = new sdk.Databases(client);
 export const storage = new sdk.Storage(client);
