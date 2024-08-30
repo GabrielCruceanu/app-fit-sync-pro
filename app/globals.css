@@ -160,7 +160,7 @@
   }
 
   .copyright {
-    @apply text-14-regular justify-items-end text-center text-slate-600 xl:text-left;
+    @apply text-14-regular justify-items-end text-center text-gray-500 xl:text-left;
   }
 
   /* ==== SUCCESS */
@@ -187,16 +187,16 @@
 
   /* ==== FORM */
   .radio-group {
-    @apply flex h-full flex-1 items-center gap-2 rounded-md border border-dashed border-slate-500 bg-slate-400 p-3;
+    @apply flex h-full flex-1 items-center gap-2 rounded-md border border-gray-300 bg-background p-3;
   }
 
   .checkbox-label {
-    @apply cursor-pointer text-sm font-medium text-slate-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70 md:leading-none;
+    @apply cursor-pointer text-sm font-medium text-gray-500 peer-disabled:cursor-not-allowed peer-disabled:opacity-70 md:leading-none;
   }
 
   /* ==== File Upload */
   .file-upload {
-    @apply text-12-regular flex cursor-pointer  flex-col items-center justify-center gap-3 rounded-md border border-dashed border-slate-500 bg-slate-400 p-5;
+    @apply text-12-regular flex cursor-pointer flex-col items-center justify-center gap-3 rounded-md border border-dashed border-gray-300 bg-background p-5;
   }
 
   .file-upload_label {
@@ -282,7 +282,7 @@
   }
 
   .shad-gray-btn {
-    @apply border border-slate-500 cursor-pointer bg-slate-400 text-white !important;
+    @apply border border-gray-300 cursor-pointer bg-slate-400 text-white !important;
   }
 
   .shad-input-label {
@@ -290,15 +290,15 @@
   }
 
   .shad-input {
-    @apply bg-background placeholder:text-foreground border-slate-500 h-11 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
+    @apply bg-background placeholder:text-foreground border-gray-300 h-11 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
   }
 
   .shad-input-icon {
-    @apply bg-background placeholder:text-foreground border-slate-500 h-11 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
+    @apply bg-background placeholder:text-foreground border-gray-300 h-11 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
   }
 
-  .shad-textArea {
-    @apply bg-background placeholder:text-foreground border-slate-500 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
+  .shad-textarea {
+    @apply bg-background placeholder:text-foreground border-gray-300 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
   }
 
   .shad-combobox-item {
@@ -310,15 +310,15 @@
   }
 
   .shad-select-trigger {
-    @apply bg-slate-400  placeholder:text-slate-600 border-slate-500 h-11 focus:ring-0 focus:ring-offset-0 !important;
+    @apply bg-background  placeholder:text-foreground border-gray-300 h-11 focus:ring-0 focus:ring-offset-0 !important;
   }
 
   .shad-select-content {
-    @apply bg-slate-400 border-slate-500 !important;
+    @apply bg-background text-foreground border-gray-300 !important;
   }
 
   .shad-dialog {
-    @apply bg-slate-400 border-slate-500 !important;
+    @apply bg-slate-400 border-gray-300 !important;
   }
 
   .shad-dialog button {
@@ -346,11 +346,11 @@
   }
 
   .shad-otp-slot {
-    @apply text-36-bold justify-center flex border border-slate-500 rounded-lg size-16 gap-4 !important;
+    @apply text-36-bold justify-center flex border border-gray-300 rounded-lg size-16 gap-4 !important;
   }
 
   .shad-alert-dialog {
-    @apply space-y-5 bg-slate-400 border-slate-500 outline-none !important;
+    @apply space-y-5 bg-slate-400 border-gray-300 outline-none !important;
   }
 
   .shad-sheet-content button {
@@ -381,15 +381,13 @@
 .react-datepicker__day-name,
 .react-datepicker__day,
 .react-datepicker-time__header {
-  background-color: #1a1d21 !important;
-  border-color: #363a3d !important;
-  color: #abb8c4 !important;
+  @apply bg-background text-foreground border-gray-300 !important;
 }
 
 .react-datepicker__current-month,
 .react-datepicker__day-name,
 .react-datepicker-time__header {
-  color: #ffffff !important;
+  @apply text-foreground !important;
 }
 
 .react-datepicker__triangle {
@@ -403,18 +401,18 @@
 }
 
 .react-datepicker__input-container input {
-  background-color: #1a1d21 !important;
+  @apply bg-foreground;
   width: 100%;
   outline: none;
 }
 
 .react-datepicker__day--selected {
-  @apply bg-background text-foreground;
+  @apply bg-foreground text-background !important;
   border-radius: 4px;
 }
 
 .react-datepicker__time-list-item--selected {
-  @apply bg-background text-foreground;
+  @apply bg-background text-foreground !important;
 }
 
 .react-datepicker__time-container {
