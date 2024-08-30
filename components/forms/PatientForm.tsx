@@ -10,17 +10,7 @@ import { useState } from "react";
 import { UserFormValidation } from "@/lib/validation";
 import { useRouter } from "next/navigation";
 import { createUser } from "@/lib/actions/patient.actions";
-
-export enum FormFieldType {
-  INPUT = "input",
-  CHECKBOX = "checkbox",
-  TEXTAREA = "textarea",
-  PHONE_INPUT = "phone-input",
-  DATE_PICKER = "date-picker",
-  RADIO = "radio",
-  SELECT = "select",
-  SKELETON = "skeleton",
-}
+import { FormFieldType } from "@/types/form.enum";
 
 const PatientForm = () => {
   const router = useRouter();
